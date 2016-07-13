@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>这是一个HTML5页面！</title>
+</head>
+<body>
+<h3>js调用本地方法，android调用js方法</h3>
+<a id="andriodBut">js中调用android方法（未调用）</a><button onClick="andriodBut()">点击调用android方法</button>
+</p>
+<a id="jsbut">android调用JS方法(未调用)</a><button onClick="jsBut()">测试JS方法</button>
+
+  <script>
+	function jsBut(){
+		alert("调用js成功，这是js弹框！");
+		document.getElementById("jsbut").innerHTML=("android调用JS方法（测试通过）");
+	} 
+
+	function jsButFromAndroid(){
+		alert("调用js成功，这是js弹框！");
+		document.getElementById("jsbut").innerHTML=("android调用JS方法（android调用成功）");
+	}
+
+	function andriodBut(){
+		alert("调用Android，这是js提示弹框！");
+		document.getElementById("andriodBut").innerHTML=("js中调用android方法（js调用中）");
+	    myObj.JsCallAndroid();
+	}
+
+    </script>
+<p></p>
+</body>
+</html>
